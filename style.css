@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    font-family: inherit;
+    color: inherit;
+}
+
+ul, ul, li{
+    list-style: none;
+}
+
 :root{
     --text-font: 'Barlow', sans-serif;
     --title-font: 'Fraunces', serif;
@@ -166,6 +176,7 @@ header .arrow-down{
     align-items: center;
     justify-content: center;
     gap: 32px;
+    padding: 0px 24px;
 }
 
 .client__avatar{
@@ -206,25 +217,41 @@ header .arrow-down{
     padding-top: 12px;
 }
 
-.milkbottles{
-    grid-area: 1;
-}
-
-.orange{
-    grid-area: 2;
-}
-
-.cone{
-    grid-area: 3;
-}
-
-.sugar{
-    grid-area: 4;
-}
-
-.galeria{
+.images{
     display: grid;
-    grid-template-areas:
-    1 1 2 2
-    3 3 4 4;
+    grid-template-columns: 1fr 1fr;
+}
+
+.images img{
+    width: 100%;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    background-color: #8fd4c5;
+    justify-content: space-evenly;
+}
+
+footer h2{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--footer-bg);
+}
+
+footer nav ul{
+    display: flex;
+    width: 100vw;
+    justify-content: space-evenly;
+    color: var(--footer-bg);
+    font-weight: 600;
+}
+
+footer > ul{
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0px 80px;
 }
